@@ -1,0 +1,24 @@
+@media screen and (max-width:650px) {
+    .maxx{
+        width:20em !important;
+        height: auto !important;
+        /*margin:30px !important;*/
+
+    }
+    .cont{
+        margin-left:45px !important;
+        margin-top:45px !important;
+    }
+    .carousel{
+        display:none;
+    }
+}
+/*@media screen and (max-width:1px) {*/
+
+    /*.cont{*/
+        /*margin-left:100px !important;*/
+        /*margin-top: 20px !important;*/
+
+    /*}*/
+
+/*}*/

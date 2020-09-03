@@ -1,0 +1,18 @@
+
+<div class="text-center display-1 animated rollIn mt-5  "> Mobiles</div>
+<div class="mt-5" *ngFor='let p of allmobileProduct' >
+    
+    <div class="float-left bg-warning text-center text-light cont ml-3 mb-3">
+        <img src="assets/phon/{{p.product_image}}" class="responsive p-1 animated zoomIn maxx" style="width:19em;height: 13em">
+        <h4 >{{p?.product_name}}</h4>
+        <h2>{{p?.product_price}}</h2>
+        <button class="btn btn-light mb-1" (click)='getProductId(p?.id)'>Buy</button>
+
+    </div>
+</div>
+<div style="clear:both"></div>
+<div class="text-center animated rollIn mb-5 ">
+    <button class="btn btn-danger"(click)='returnBack()' >return </button>
+ <button class="btn btn-success ml-2"(click)='gotocart()' >Cart </button>
+</div>
+

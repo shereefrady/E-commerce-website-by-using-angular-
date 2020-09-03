@@ -1,0 +1,19 @@
+
+
+<div class="text-center display-1 animated rollIn mt-5  "> Laptops</div>
+<div class="mx-auto mt-5 "*ngFor='let product of AllProduct' >
+
+    <div class="float-left bg-dark text-center text-light cont ml-3 mb-3"> <!--please add your *ngfor here-->
+        <img src="assets/{{product.product_image}}" class="responsive p-1 animated zoomIn maxx" style="width:15em;height: 13em">
+        <h4 >{{product.product_name}}</h4>
+        <h2>{{product.product_price|currency}}</h2>
+        <button class="btn btn-light mb-1" (click)='getProductId(product?.id)'>Buy</button>
+
+    </div>
+</div>
+<div style="clear:both"></div>
+<div class="text-center animated rollIn  float-none "> <button class="btn btn-primary mt-5"(click)='viewMore()' >View More </button></div>
+
+
+
+

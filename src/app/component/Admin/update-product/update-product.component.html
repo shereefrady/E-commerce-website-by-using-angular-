@@ -1,0 +1,40 @@
+<div style="width:750px;height:400px;" class="mx-auto">
+  <form #updateForm="ngForm" (submit)="formAddProduct()">
+    <div class="container">
+
+      <label for="productName"><b>product Name</b></label>
+      <input #proName="ngModel" [(ngModel)]='updatedProductData.product_name' type="text" placeholder="Enter Your Product Name"
+        id="productName" name="productName"  required>
+        <br>
+
+      <label for="productPrice"><b>product Price</b></label>
+      <input #proPrice="ngModel" [(ngModel)]='updatedProductData.product_price' type="text" placeholder="Enter Your Product Price"
+        id="productPrice" name="productPrice"  required>
+
+
+      <label for="productQuntity"><b>product Quntity</b></label>
+      <input #proquntity="ngModel" [(ngModel)]='updatedProductData.product_quantity' type="text" placeholder="Enter Your Product Quntity"
+        id="productQuntity" name="productQuntity"  required>
+
+       <!-- <img src="{{assets/phon/{{product?.product_image}}" width="200" height="200"> -->
+      <label for="productImage"><b>product Image</b></label>
+      <input #proImage="ngModel" [(ngModel)]='updatedProductData.product_image' type="file" placeholder="Enter Your Product Image"
+        id="productImage" name="productImage" required>
+
+       <label for="productCategoryID"><b>product Category</b></label>
+      <input #procategory="ngModel" [(ngModel)]='updatedProductData.category_id' type="text" placeholder="Enter Your Product category"
+        id="productCategoryID" name="productCategoryID" required> 
+<br><br>
+    
+     
+        <br><br>
+      <input type="submit" class="btn btn-primary" value="ADD New Product">
+
+    </div>
+
+    <!-- <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+    </div> -->
+  </form>
+
+</div>

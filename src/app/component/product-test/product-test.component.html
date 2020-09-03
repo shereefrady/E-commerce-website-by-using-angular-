@@ -1,0 +1,10 @@
+<table border="1">
+  <tr>
+      <th>product ID</th><th>product Name</th><th>Product Price</th><th>product Quntity</th><th>product Image</th><th>catrgory</th>
+  
+  </tr>
+  <tr *ngFor='let product of AllProduct'>
+      <td>{{product.id}}</td><td>{{product.product_name}}</td><td>{{product.product_price}}</td>
+      <td>{{product.product_quantity}}</td><td><img src="product.product_image" ></td><td>{{product.category_id}}</td><td><button (click)='onDetailsClick(product.id)'>Details</button></td>
+  </tr>
+</table>

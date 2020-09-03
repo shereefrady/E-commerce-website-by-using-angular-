@@ -1,0 +1,18 @@
+<div class="container-fluid">
+
+    <div class="display-1 text-center">{{productDatails?.product_name}}</div>
+    <div class="row">
+     <div class="col-4 mt-2">
+       <img  src="assets/phon/{{productDatails?.product_image}}"  style="width: 25em ; height:auto">
+     </div>
+      <div class="col-7">
+      <div class=" display-4">{{productDatails?.product_price}}</div>
+<div class="mt-5">
+        <button  class="btn btn-success ml-2" (click)='gotocart()'>cart</button>
+        <button  class="btn btn-danger ml-2" (click)='returnBack()'>Return to products</button>
+        <button  class="btn btn-primary ml-2" (click)='getProductId(productDatails?.id)'> Buy </button>
+</div>
+      </div>
+    </div>
+  </div>
+ 

@@ -1,0 +1,47 @@
+<div style="width:450px;height:450px;" class="mx-auto">
+  <form #registerForm="ngForm" (submit)="formregister()">
+    <div class="container">
+
+      <label for="uName"><b>Name</b></label>
+      <input #userName="ngModel" [(ngModel)]='userinfo.user_name' type="text" placeholder="Enter Name" id="uName" name="uName"
+        required minlength="4">
+      <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="alert alert-danger">
+
+        <div *ngIf="userName.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="userName.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+
+      </div>
+
+      <label for="uEmail"><b>Email</b></label>
+      <input #uEmail="ngModel" [(ngModel)]='userinfo.user_email' type="email" placeholder="Enter Email" id="uEmail"
+        name="uEmail" required>
+      <div *ngIf="uEmail.invalid && (uEmail.dirty || uEmail.touched)" class="alert alert-danger">
+        <div *ngIf="uEmail.errors.required">
+          Email is required.
+        </div>
+      </div>
+
+
+      <label for="psw"><b>Password</b></label>
+      <input #password="ngModel" [(ngModel)]='userinfo.user_password' type="password" placeholder="Enter Password" id="psw"
+        name="psw" required>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+          <div *ngIf="password.errors.required">
+            Password is required.
+          </div>
+        </div>
+
+      <input type="submit" class="btn btn-primary" value="register">
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+
+</div>
